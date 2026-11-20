@@ -1,0 +1,10 @@
+{
+  "expected_intervals": 63843,
+  "retrieved_rows": 63843,
+  "missing_intervals": 0,
+  "missing_rate": 0.0,
+  "duplicates": 0,
+  "start_utc": "2022-12-31 23:00:00+00:00",
+  "end_exclusive_utc": "2026-11-18 23:00:00+00:00",
+  "missing_timestamps": []
+}

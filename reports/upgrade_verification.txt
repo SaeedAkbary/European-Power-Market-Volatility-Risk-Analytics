@@ -1,0 +1,24 @@
+Upgrade verification — 19 November 2026
+
+Baseline: 12 pytest tests passed before implementation changes.
+Expanded tests: 21 passed; 10 pandas/NumPy timedelta deprecation warnings in fixtures.
+Ruff: all checks passed, including notebooks and presentation scripts.
+Data: 22 SMARD fields downloaded and diagnosed; 136128 observed quarters per core series.
+Provider catalogue: all 22 configured IDs, units and Germany-region eligibility verified.
+Raw provenance: 4574 cached response hashes checked; zero checksum failures.
+French physical import/export: 33 missing quarters each, retained as missing (34023 complete hours).
+Nuclear: 37874 observed quarters; excluded from explanatory models, no zero-fill.
+Quarter-hour normalization: MWh divided by 0.25; imports explicitly normalized by direction.
+Core research: 34032 complete hourly observations.
+Enhanced forecast evaluation: 16488 common hours/model, monthly past-only calibration.
+All seven research notebooks executed successfully, with output tables and real chart embeds.
+All five Streamlit page branches passed AppTest against actual local outputs.
+PDF: pypdf verified exactly 2 pages; both Poppler renders visually inspected and readable.
+Reproducibility: five numerical evidence tables matched after full local report rerun to 1e-12.
+Original price and original forecast result files preserved as baseline.
+No synthetic data used in research; synthetic fixtures only test mechanics.
+No paid API, data service or cloud infrastructure used.
+
+Outstanding: original forecast vintages/publication evidence; genuine fundamental-enhanced
+pre-clearing comparison blocked and explicitly labelled; ENTSO-E live token test incomplete;
+weather remains sample-only; border integration is French flows and French/Dutch prices.

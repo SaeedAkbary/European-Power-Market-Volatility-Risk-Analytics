@@ -1,0 +1,12 @@
+{
+  "native_intervals": 63843,
+  "valid_hourly_observations": 34032,
+  "mean_hourly_price_eur_mwh": 95.23974171368123,
+  "native_min_price": -500.0,
+  "native_max_price": 936.28,
+  "negative_price_hours": 1797.75,
+  "negative_time_share": 0.052825282087447106,
+  "negative_episodes": 376,
+  "mean_daily_spread": 121.67815761636108,
+  "absolute_change_lag1_correlation": 0.5237253204128182
+}

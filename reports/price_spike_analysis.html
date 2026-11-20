@@ -1,0 +1,443 @@
+<!doctype html><html><meta charset='utf-8'><title>Extreme-price events</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;color:#152c40}table{border-collapse:collapse}td,th{padding:7px;border:1px solid #ddd}</style><h1>Extreme-price events</h1><p>Actual SMARD observations; source: Bundesnetzagentur | SMARD.de. Hourly prices after October 2025 are complete duration-weighted averages. This loses intrahour extremes; negative duration uses native intervals. No log returns, winsorization or imputation. Price-change clustering is descriptive, not a significance test. Fixed spike >=200 EUR/MWh; ramp >=100 EUR/MWh per hour. Rolling 99th percentile uses only prior observations; 90-day window with 30-day warm-up. These are research thresholds, not optimized trading rules.</p><h2>Longest native negative-price episodes</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>start</th>
+      <th>end</th>
+      <th>duration_hours</th>
+      <th>minimum_price</th>
+      <th>intervals</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>44</th>
+      <td>2023-12-24 00:00:00+00:00</td>
+      <td>2023-12-25 12:00:00+00:00</td>
+      <td>36.00</td>
+      <td>-13.37</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>241</th>
+      <td>2025-10-04 19:30:00+00:00</td>
+      <td>2025-10-05 15:30:00+00:00</td>
+      <td>20.00</td>
+      <td>-5.09</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>2024-07-06 22:00:00+00:00</td>
+      <td>2024-07-07 16:00:00+00:00</td>
+      <td>18.00</td>
+      <td>-22.37</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>278</th>
+      <td>2026-04-04 23:30:00+00:00</td>
+      <td>2026-04-05 16:30:00+00:00</td>
+      <td>17.00</td>
+      <td>-114.53</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>238</th>
+      <td>2025-10-03 23:15:00+00:00</td>
+      <td>2025-10-04 15:30:00+00:00</td>
+      <td>16.25</td>
+      <td>-5.02</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>2024-08-24 23:00:00+00:00</td>
+      <td>2024-08-25 15:00:00+00:00</td>
+      <td>16.00</td>
+      <td>-20.01</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>2024-10-12 23:00:00+00:00</td>
+      <td>2024-10-13 15:00:00+00:00</td>
+      <td>16.00</td>
+      <td>-15.69</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2023-07-02 02:00:00+00:00</td>
+      <td>2023-07-02 17:00:00+00:00</td>
+      <td>15.00</td>
+      <td>-500.00</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2022-12-31 23:00:00+00:00</td>
+      <td>2023-01-01 13:00:00+00:00</td>
+      <td>14.00</td>
+      <td>-5.40</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>2025-01-01 02:00:00+00:00</td>
+      <td>2025-01-01 16:00:00+00:00</td>
+      <td>14.00</td>
+      <td>-1.01</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>2023-07-16 03:00:00+00:00</td>
+      <td>2023-07-16 16:00:00+00:00</td>
+      <td>13.00</td>
+      <td>-60.04</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>2023-12-26 00:00:00+00:00</td>
+      <td>2023-12-26 12:00:00+00:00</td>
+      <td>12.00</td>
+      <td>-3.69</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>327</th>
+      <td>2026-06-14 05:30:00+00:00</td>
+      <td>2026-06-14 16:30:00+00:00</td>
+      <td>11.00</td>
+      <td>-29.96</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>326</th>
+      <td>2026-06-13 06:30:00+00:00</td>
+      <td>2026-06-13 16:45:00+00:00</td>
+      <td>10.25</td>
+      <td>-52.99</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>2026-06-07 05:45:00+00:00</td>
+      <td>2026-06-07 16:00:00+00:00</td>
+      <td>10.25</td>
+      <td>-50.25</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>2024-06-09 06:00:00+00:00</td>
+      <td>2024-06-09 16:00:00+00:00</td>
+      <td>10.00</td>
+      <td>-37.14</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>2024-06-15 07:00:00+00:00</td>
+      <td>2024-06-15 17:00:00+00:00</td>
+      <td>10.00</td>
+      <td>-80.01</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>2024-06-16 06:00:00+00:00</td>
+      <td>2024-06-16 16:00:00+00:00</td>
+      <td>10.00</td>
+      <td>-35.67</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>2023-08-08 06:00:00+00:00</td>
+      <td>2023-08-08 16:00:00+00:00</td>
+      <td>10.00</td>
+      <td>-21.77</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>2025-06-08 07:00:00+00:00</td>
+      <td>2025-06-08 17:00:00+00:00</td>
+      <td>10.00</td>
+      <td>-53.06</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table><h2>Largest complete-day spreads</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>min</th>
+      <th>max</th>
+      <th>first</th>
+      <th>last</th>
+      <th>count</th>
+      <th>spread</th>
+      <th>complete</th>
+      <th>true_range</th>
+      <th>atr_14d</th>
+    </tr>
+    <tr>
+      <th>market_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2024-12-12</th>
+      <td>107.3500</td>
+      <td>936.2800</td>
+      <td>122.2400</td>
+      <td>134.7500</td>
+      <td>24</td>
+      <td>828.9300</td>
+      <td>True</td>
+      <td>828.9300</td>
+      <td>164.685714</td>
+    </tr>
+    <tr>
+      <th>2024-11-06</th>
+      <td>95.4700</td>
+      <td>820.1100</td>
+      <td>106.3900</td>
+      <td>111.7300</td>
+      <td>24</td>
+      <td>724.6400</td>
+      <td>True</td>
+      <td>724.6400</td>
+      <td>173.856429</td>
+    </tr>
+    <tr>
+      <th>2026-05-01</th>
+      <td>-499.0000</td>
+      <td>173.3250</td>
+      <td>107.2275</td>
+      <td>96.9825</td>
+      <td>24</td>
+      <td>672.3250</td>
+      <td>True</td>
+      <td>672.3250</td>
+      <td>240.882500</td>
+    </tr>
+    <tr>
+      <th>2023-07-02</th>
+      <td>-500.0000</td>
+      <td>94.9000</td>
+      <td>16.4500</td>
+      <td>86.0800</td>
+      <td>24</td>
+      <td>594.9000</td>
+      <td>True</td>
+      <td>594.9000</td>
+      <td>125.945000</td>
+    </tr>
+    <tr>
+      <th>2026-06-24</th>
+      <td>70.9825</td>
+      <td>665.8200</td>
+      <td>178.8025</td>
+      <td>263.6100</td>
+      <td>24</td>
+      <td>594.8375</td>
+      <td>True</td>
+      <td>594.8375</td>
+      <td>225.501607</td>
+    </tr>
+    <tr>
+      <th>2024-09-03</th>
+      <td>82.6900</td>
+      <td>656.3700</td>
+      <td>99.6000</td>
+      <td>117.5600</td>
+      <td>24</td>
+      <td>573.6800</td>
+      <td>True</td>
+      <td>573.6800</td>
+      <td>195.950000</td>
+    </tr>
+    <tr>
+      <th>2026-04-26</th>
+      <td>-413.7700</td>
+      <td>157.8150</td>
+      <td>79.4400</td>
+      <td>122.8750</td>
+      <td>24</td>
+      <td>571.5850</td>
+      <td>True</td>
+      <td>571.5850</td>
+      <td>182.323036</td>
+    </tr>
+    <tr>
+      <th>2026-09-14</th>
+      <td>161.4250</td>
+      <td>697.3075</td>
+      <td>201.7050</td>
+      <td>224.6375</td>
+      <td>24</td>
+      <td>535.8825</td>
+      <td>True</td>
+      <td>535.8825</td>
+      <td>223.467321</td>
+    </tr>
+    <tr>
+      <th>2026-06-23</th>
+      <td>60.3450</td>
+      <td>545.5050</td>
+      <td>146.0600</td>
+      <td>199.3975</td>
+      <td>24</td>
+      <td>485.1600</td>
+      <td>True</td>
+      <td>485.1600</td>
+      <td>193.391964</td>
+    </tr>
+    <tr>
+      <th>2026-09-22</th>
+      <td>116.0225</td>
+      <td>596.3800</td>
+      <td>181.3725</td>
+      <td>213.0050</td>
+      <td>24</td>
+      <td>480.3575</td>
+      <td>True</td>
+      <td>480.3575</td>
+      <td>242.976964</td>
+    </tr>
+    <tr>
+      <th>2025-01-20</th>
+      <td>114.4100</td>
+      <td>583.4000</td>
+      <td>122.2700</td>
+      <td>137.9800</td>
+      <td>24</td>
+      <td>468.9900</td>
+      <td>True</td>
+      <td>468.9900</td>
+      <td>120.097143</td>
+    </tr>
+    <tr>
+      <th>2023-09-11</th>
+      <td>86.4500</td>
+      <td>524.2700</td>
+      <td>105.0000</td>
+      <td>119.9400</td>
+      <td>24</td>
+      <td>437.8200</td>
+      <td>True</td>
+      <td>437.8200</td>
+      <td>131.167857</td>
+    </tr>
+    <tr>
+      <th>2025-07-01</th>
+      <td>42.4700</td>
+      <td>476.1900</td>
+      <td>111.2800</td>
+      <td>147.6500</td>
+      <td>24</td>
+      <td>433.7200</td>
+      <td>True</td>
+      <td>433.7200</td>
+      <td>195.072143</td>
+    </tr>
+    <tr>
+      <th>2026-06-18</th>
+      <td>18.6700</td>
+      <td>441.9150</td>
+      <td>135.2575</td>
+      <td>163.0175</td>
+      <td>24</td>
+      <td>423.2450</td>
+      <td>True</td>
+      <td>423.2450</td>
+      <td>162.215357</td>
+    </tr>
+    <tr>
+      <th>2026-11-09</th>
+      <td>223.2700</td>
+      <td>644.1775</td>
+      <td>229.7550</td>
+      <td>254.2050</td>
+      <td>24</td>
+      <td>420.9075</td>
+      <td>True</td>
+      <td>424.2500</td>
+      <td>157.381250</td>
+    </tr>
+    <tr>
+      <th>2024-11-05</th>
+      <td>91.2000</td>
+      <td>505.3100</td>
+      <td>101.7700</td>
+      <td>110.0300</td>
+      <td>24</td>
+      <td>414.1100</td>
+      <td>True</td>
+      <td>414.1100</td>
+      <td>132.040000</td>
+    </tr>
+    <tr>
+      <th>2025-09-19</th>
+      <td>0.0000</td>
+      <td>409.2400</td>
+      <td>74.0900</td>
+      <td>78.9300</td>
+      <td>24</td>
+      <td>409.2400</td>
+      <td>True</td>
+      <td>409.2400</td>
+      <td>186.890714</td>
+    </tr>
+    <tr>
+      <th>2026-06-30</th>
+      <td>99.0750</td>
+      <td>504.7675</td>
+      <td>161.7350</td>
+      <td>182.4800</td>
+      <td>24</td>
+      <td>405.6925</td>
+      <td>True</td>
+      <td>405.6925</td>
+      <td>281.352857</td>
+    </tr>
+    <tr>
+      <th>2026-09-10</th>
+      <td>66.1400</td>
+      <td>460.8600</td>
+      <td>160.1800</td>
+      <td>199.4025</td>
+      <td>24</td>
+      <td>394.7200</td>
+      <td>True</td>
+      <td>394.7200</td>
+      <td>195.343571</td>
+    </tr>
+    <tr>
+      <th>2026-05-28</th>
+      <td>-0.0125</td>
+      <td>393.9350</td>
+      <td>132.9450</td>
+      <td>159.7975</td>
+      <td>24</td>
+      <td>393.9475</td>
+      <td>True</td>
+      <td>393.9475</td>
+      <td>188.388036</td>
+    </tr>
+  </tbody>
+</table></html>

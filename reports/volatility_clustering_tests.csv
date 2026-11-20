@@ -1,0 +1,5 @@
+series,n,lags,statistic,p_value
+absolute_hourly_changes,34031,24,31593.150596866937,0.0
+absolute_hourly_changes,34031,168,87686.50041882158,0.0
+squared_hour_adjusted_anomalies,33312,24,48263.42504186579,0.0
+squared_hour_adjusted_anomalies,33312,168,54900.599137574034,0.0

@@ -1,0 +1,143 @@
+<!doctype html><html><meta charset='utf-8'><title>Volatility conditional on physical conditions</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;color:#152c40}table{border-collapse:collapse}td,th{padding:7px;border:1px solid #ddd}</style><h1>Volatility conditional on physical conditions</h1><p>Retrospective hourly-equivalent prices. Full-sample bins are descriptive. Daily spreads require complete local days including DST. Wind/solar share is generation divided by grid load, not an installed-capacity factor; it can exceed one.</p><h2>Renewable share and price dispersion</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>x</th>
+      <th>mean</th>
+      <th>median</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>bin</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>(0.0010899999999999998, 0.198]</th>
+      <td>6807</td>
+      <td>0.120251</td>
+      <td>144.447754</td>
+      <td>128.320</td>
+      <td>65.032360</td>
+    </tr>
+    <tr>
+      <th>(0.198, 0.343]</th>
+      <td>6806</td>
+      <td>0.270872</td>
+      <td>119.684269</td>
+      <td>112.590</td>
+      <td>37.939597</td>
+    </tr>
+    <tr>
+      <th>(0.343, 0.494]</th>
+      <td>6806</td>
+      <td>0.417231</td>
+      <td>103.973124</td>
+      <td>98.620</td>
+      <td>33.167032</td>
+    </tr>
+    <tr>
+      <th>(0.494, 0.686]</th>
+      <td>6806</td>
+      <td>0.585612</td>
+      <td>80.798809</td>
+      <td>79.835</td>
+      <td>34.064982</td>
+    </tr>
+    <tr>
+      <th>(0.686, 1.387]</th>
+      <td>6807</td>
+      <td>0.854270</td>
+      <td>27.297506</td>
+      <td>14.870</td>
+      <td>43.593338</td>
+    </tr>
+  </tbody>
+</table><h2>Residual load and price dispersion</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>x</th>
+      <th>mean</th>
+      <th>median</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>bin</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>(-15561.591, 16258.65]</th>
+      <td>6807</td>
+      <td>7530.669274</td>
+      <td>25.720612</td>
+      <td>13.27000</td>
+      <td>42.466517</td>
+    </tr>
+    <tr>
+      <th>(16258.65, 26099.774]</th>
+      <td>6806</td>
+      <td>21521.252529</td>
+      <td>79.776927</td>
+      <td>78.28625</td>
+      <td>31.653088</td>
+    </tr>
+    <tr>
+      <th>(26099.774, 33715.062]</th>
+      <td>6806</td>
+      <td>29996.034838</td>
+      <td>100.844102</td>
+      <td>95.10000</td>
+      <td>28.845171</td>
+    </tr>
+    <tr>
+      <th>(33715.062, 41626.552]</th>
+      <td>6806</td>
+      <td>37510.558262</td>
+      <td>116.803571</td>
+      <td>109.42500</td>
+      <td>33.118160</td>
+    </tr>
+    <tr>
+      <th>(41626.552, 68275.74]</th>
+      <td>6807</td>
+      <td>48962.525851</td>
+      <td>153.055216</td>
+      <td>137.28000</td>
+      <td>64.061640</td>
+    </tr>
+  </tbody>
+</table><h2>Daily renewable share and spread</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>renewable_share</th>
+      <th>spread</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>renewable_share</th>
+      <td>1.000000</td>
+      <td>0.132696</td>
+    </tr>
+    <tr>
+      <th>spread</th>
+      <td>0.132696</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table></html>

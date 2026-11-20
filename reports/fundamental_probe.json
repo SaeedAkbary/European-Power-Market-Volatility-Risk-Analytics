@@ -1,0 +1,182 @@
+[
+  {
+    "filter": 410,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      9372.5,
+      9296.75,
+      9121.75
+    ]
+  },
+  {
+    "filter": 411,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      11121.0,
+      11049.75,
+      10941.25
+    ]
+  },
+  {
+    "filter": 4067,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      4614.0,
+      4667.5,
+      4702.5
+    ]
+  },
+  {
+    "filter": 1225,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      969.5,
+      801.5,
+      607.75
+    ]
+  },
+  {
+    "filter": 4068,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "filter": 123,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      4281.75,
+      4322.25,
+      4359.25
+    ]
+  },
+  {
+    "filter": 3791,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      968.0,
+      891.25,
+      813.75
+    ]
+  },
+  {
+    "filter": 125,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "filter": 4071,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      409.5,
+      403.75,
+      408.0
+    ]
+  },
+  {
+    "filter": 4069,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      497.0,
+      497.75,
+      494.0
+    ]
+  },
+  {
+    "filter": 1223,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      1181.5,
+      1176.5,
+      1181.25
+    ]
+  },
+  {
+    "filter": 1226,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      302.25,
+      303.25,
+      315.25
+    ]
+  },
+  {
+    "filter": 4066,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      1002.75,
+      1001.0,
+      1001.5
+    ]
+  },
+  {
+    "filter": 1227,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      475.75,
+      451.5,
+      452.5
+    ]
+  },
+  {
+    "filter": 1228,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      30.25,
+      30.25,
+      30.25
+    ]
+  },
+  {
+    "filter": 1224,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      615.75,
+      615.75,
+      615.75
+    ]
+  },
+  {
+    "filter": 254,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      61.38,
+      61.38,
+      61.38
+    ]
+  },
+  {
+    "filter": 256,
+    "rows": 96,
+    "nulls": 0,
+    "first_values": [
+      109.9,
+      109.9,
+      109.9
+    ]
+  }
+]

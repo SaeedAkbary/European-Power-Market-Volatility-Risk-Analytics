@@ -1,0 +1,2 @@
+scenarios,confidence,mean_pnl_eur,var_loss_eur,expected_shortfall_loss_eur
+1417,0.95,115.02790049400139,1559.9505000000004,2698.8873764996465

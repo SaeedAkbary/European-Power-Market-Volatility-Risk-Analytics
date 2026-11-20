@@ -1,0 +1,3 @@
+model,holdout_mae,train_rows,holdout_rows
+calendar_controlled_ridge,32.27082239106958,17544,16488
+calendar_controlled_boosting,33.980848547150885,17544,16488

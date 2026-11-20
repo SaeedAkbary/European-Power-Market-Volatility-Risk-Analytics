@@ -1,0 +1,9 @@
+{
+  "complete_quarterhour_hours": 9937,
+  "mean_intrahour_spread_eur_mwh": 23.904338331488376,
+  "max_intrahour_spread_eur_mwh": 460.0,
+  "hidden_negative_hours": 101,
+  "hidden_positive_spike_hours": 357,
+  "native_price_std": 72.70546954869135,
+  "hourly_mean_price_std": 71.32686049174683
+}

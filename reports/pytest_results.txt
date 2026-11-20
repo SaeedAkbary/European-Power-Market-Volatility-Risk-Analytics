@@ -1,0 +1,11 @@
+............                                                             [100%]
+============================== warnings summary ===============================
+tests/test_market_contracts.py::test_missing_quarter_invalidates_hour_and_negative_is_valid
+tests/test_market_contracts.py::test_quality_counts_missing_and_rejects_duplicates
+tests/test_market_contracts.py::test_negative_runs_break_at_gap_and_null
+  <repository>\tests\test_market_contracts.py:12: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    return pd.DataFrame({"delivery_start": index, "delivery_end": index + pd.Timedelta(minutes=minutes),
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 3 warnings in 2.51s
+

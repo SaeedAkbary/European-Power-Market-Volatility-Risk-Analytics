@@ -1,0 +1,18 @@
+Verification on 19 November 2026
+
+Real price audit: 63,843 expected and retrieved native intervals; zero missing or duplicates.
+Phase 1 execution: passed; 34,032 complete hourly-equivalent observations.
+Regime execution: passed; 2023 calibration and 2024 onward evaluation.
+Fundamentals: unavailable-input report produced; no fabricated findings.
+Advanced forecasting: all 35 monthly folds completed, 25,272 hours per model.
+Forecast hour/season subgroup counts: validated, no duplicate-index multiplication.
+Portfolio execution: passed; 1,417 complete historical UTC-day scenarios.
+pytest: 12 passed; three pandas/NumPy timedelta deprecation warnings in synthetic fixtures.
+Ruff: all checks passed.
+Streamlit AppTest: all five dashboard page branches passed.
+Dashboard AppTest required permission to use localhost outside the filesystem/network sandbox.
+Chart QA: volatility heatmap visually inspected; labels and colour scale readable.
+Notebooks: generated presentation readers, not independently executed.
+
+No claim of full end-to-end fundamental integration or vintage-verified ex-ante forecasting.
+No remote repository publication performed.

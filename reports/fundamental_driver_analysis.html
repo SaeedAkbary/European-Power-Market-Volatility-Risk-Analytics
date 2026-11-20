@@ -1,0 +1,307 @@
+<!doctype html><html><meta charset='utf-8'><title>German electricity price formation: observed evidence</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;color:#152c40}table{border-collapse:collapse}td,th{padding:7px;border:1px solid #ddd}</style><h1>German electricity price formation: observed evidence</h1><p>Actual SMARD data; 34032 complete hourly rows out of 34032. Source: Bundesnetzagentur | SMARD.de. Germany physical variables explain DE-LU prices retrospectively; Luxembourg is not included in these load/generation totals. High/low comparisons use full-sample top/bottom quartiles and moving seven-day block confidence intervals. Hour, weekday and month are controlled in separate explanatory models trained before 2025, held out afterward. Seasonal/fuel-price, outage, dispatch and cross-border confounding remain; simultaneous conventional output is endogenous. Permutation importance is descriptive and unstable under correlated predictors; not a causal effect or ex-ante forecast. Nuclear is excluded from models because its series has extensive missing observations; none are filled with zero.</p><h2>Quantified comparisons</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>finding</th>
+      <th>variable</th>
+      <th>outcome</th>
+      <th>period_start</th>
+      <th>period_end</th>
+      <th>complete_rows</th>
+      <th>low_threshold</th>
+      <th>high_threshold</th>
+      <th>low_n</th>
+      <th>high_n</th>
+      <th>low_mean</th>
+      <th>high_mean</th>
+      <th>difference</th>
+      <th>ci_low</th>
+      <th>ci_high</th>
+      <th>method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Residual-load price gradient</td>
+      <td>actual_residual_load_mw</td>
+      <td>price_eur_mwh</td>
+      <td>2022-12-31 23:00:00+00:00</td>
+      <td>2026-11-18 22:00:00+00:00</td>
+      <td>34032</td>
+      <td>19149.0600</td>
+      <td>39414.1675</td>
+      <td>8508</td>
+      <td>8508</td>
+      <td>34.103580</td>
+      <td>147.323111</td>
+      <td>113.219530</td>
+      <td>106.585446</td>
+      <td>122.543038</td>
+      <td>Full-sample descriptive quartiles; 500 moving 7-day block bootstraps; no causal inference</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Wind and negative-price incidence</td>
+      <td>wind_mw</td>
+      <td>negative</td>
+      <td>2022-12-31 23:00:00+00:00</td>
+      <td>2026-11-18 22:00:00+00:00</td>
+      <td>34032</td>
+      <td>6503.9575</td>
+      <td>22810.2500</td>
+      <td>8508</td>
+      <td>8508</td>
+      <td>0.046662</td>
+      <td>0.072050</td>
+      <td>0.025388</td>
+      <td>0.003038</td>
+      <td>0.047474</td>
+      <td>Full-sample descriptive quartiles; 500 moving 7-day block bootstraps; no causal inference</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Midday solar-price association</td>
+      <td>actual_solar_mw</td>
+      <td>price_eur_mwh</td>
+      <td>2023-01-01 09:00:00+00:00</td>
+      <td>2026-11-18 14:00:00+00:00</td>
+      <td>8508</td>
+      <td>10605.9150</td>
+      <td>33056.2500</td>
+      <td>2127</td>
+      <td>2127</td>
+      <td>109.393443</td>
+      <td>21.343619</td>
+      <td>-88.049824</td>
+      <td>-100.493046</td>
+      <td>-76.832867</td>
+      <td>Full-sample descriptive quartiles; 500 moving 7-day block bootstraps; no causal inference</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Demand and high-price incidence</td>
+      <td>actual_load_mw</td>
+      <td>spike</td>
+      <td>2022-12-31 23:00:00+00:00</td>
+      <td>2026-11-18 22:00:00+00:00</td>
+      <td>34032</td>
+      <td>45432.2550</td>
+      <td>59594.3125</td>
+      <td>8508</td>
+      <td>8508</td>
+      <td>0.004231</td>
+      <td>0.074753</td>
+      <td>0.070522</td>
+      <td>0.043551</td>
+      <td>0.098125</td>
+      <td>Full-sample descriptive quartiles; 500 moving 7-day block bootstraps; no causal inference</td>
+    </tr>
+  </tbody>
+</table><h2>Explanatory holdout</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>model</th>
+      <th>holdout_mae</th>
+      <th>train_rows</th>
+      <th>holdout_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>calendar_controlled_ridge</td>
+      <td>32.270822</td>
+      <td>17544</td>
+      <td>16488</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>calendar_controlled_boosting</td>
+      <td>33.980849</td>
+      <td>17544</td>
+      <td>16488</td>
+    </tr>
+  </tbody>
+</table><h2>Seasonal physical conditions</h2><table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">price_eur_mwh</th>
+      <th colspan="3" halign="left">actual_residual_load_mw</th>
+      <th colspan="3" halign="left">actual_load_mw</th>
+      <th colspan="3" halign="left">wind_mw</th>
+      <th colspan="3" halign="left">actual_solar_mw</th>
+      <th colspan="3" halign="left">renewable_share</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>season</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>autumn</th>
+      <td>8452</td>
+      <td>110.753588</td>
+      <td>71.775064</td>
+      <td>8452</td>
+      <td>30257.052895</td>
+      <td>14572.959951</td>
+      <td>8452</td>
+      <td>53552.159030</td>
+      <td>9008.073701</td>
+      <td>8452</td>
+      <td>17378.252221</td>
+      <td>11676.087798</td>
+      <td>8452</td>
+      <td>5916.853914</td>
+      <td>9854.195839</td>
+      <td>8452</td>
+      <td>0.435975</td>
+      <td>0.254835</td>
+    </tr>
+    <tr>
+      <th>spring</th>
+      <td>8828</td>
+      <td>82.912063</td>
+      <td>51.832988</td>
+      <td>8828</td>
+      <td>27556.601341</td>
+      <td>13886.403162</td>
+      <td>8828</td>
+      <td>51365.258158</td>
+      <td>8292.065569</td>
+      <td>8828</td>
+      <td>13347.295995</td>
+      <td>9175.885767</td>
+      <td>8828</td>
+      <td>10461.360822</td>
+      <td>13638.359276</td>
+      <td>8828</td>
+      <td>0.460037</td>
+      <td>0.265133</td>
+    </tr>
+    <tr>
+      <th>summer</th>
+      <td>8832</td>
+      <td>88.361898</td>
+      <td>55.749524</td>
+      <td>8832</td>
+      <td>25250.451694</td>
+      <td>13821.718002</td>
+      <td>8832</td>
+      <td>49110.088066</td>
+      <td>7498.592311</td>
+      <td>8832</td>
+      <td>10974.927082</td>
+      <td>7665.260084</td>
+      <td>8832</td>
+      <td>12884.709290</td>
+      <td>14786.821872</td>
+      <td>8832</td>
+      <td>0.474236</td>
+      <td>0.293132</td>
+    </tr>
+    <tr>
+      <th>winter</th>
+      <td>7920</td>
+      <td>100.094645</td>
+      <td>52.859631</td>
+      <td>7920</td>
+      <td>33896.265088</td>
+      <td>15199.471415</td>
+      <td>7920</td>
+      <td>58131.620681</td>
+      <td>9174.911741</td>
+      <td>7920</td>
+      <td>21845.186242</td>
+      <td>12592.658139</td>
+      <td>7920</td>
+      <td>2390.169350</td>
+      <td>4858.153593</td>
+      <td>7920</td>
+      <td>0.425245</td>
+      <td>0.233139</td>
+    </tr>
+  </tbody>
+</table><h2>French border: complete aligned descriptive associations</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price_eur_mwh</th>
+      <th>physical_fr_net_import_mw</th>
+      <th>commercial_fr_net_import_mw</th>
+      <th>de_fr_spread</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>price_eur_mwh</th>
+      <td>1.000000</td>
+      <td>0.159996</td>
+      <td>0.028630</td>
+      <td>0.236327</td>
+    </tr>
+    <tr>
+      <th>physical_fr_net_import_mw</th>
+      <td>0.159996</td>
+      <td>1.000000</td>
+      <td>0.783160</td>
+      <td>0.588772</td>
+    </tr>
+    <tr>
+      <th>commercial_fr_net_import_mw</th>
+      <td>0.028630</td>
+      <td>0.783160</td>
+      <td>1.000000</td>
+      <td>0.513072</td>
+    </tr>
+    <tr>
+      <th>de_fr_spread</th>
+      <td>0.236327</td>
+      <td>0.588772</td>
+      <td>0.513072</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table><h2>Observed relationships</h2><img style="width:100%" src="residual_load_price_relationship.png"><img style="width:100%" src="renewable_price_analysis.png"></html>

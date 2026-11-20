@@ -1,0 +1,346 @@
+<!doctype html><html><meta charset='utf-8'><title>Exploratory price-risk backtest</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;color:#152c40}table{border-collapse:collapse}td,th{padding:7px;border:1px solid #ddd}</style><h1>Exploratory price-risk backtest</h1><p>Actual SMARD targets, monthly expanding fits from 2024. D−1 11:00 Berlin cutoff; price features lagged at least 48 hours. Linear quantile model uses a fixed recent 90-day training window; other fits expand. Fixed model settings; quantiles rearranged to prevent crossing. Seasonal baseline uses prior-week price plus training-only delivery-hour residual quantiles. Linear quantile probabilities reuse the seasonal classifier benchmark. Calibration is assessed out of sample, not fitted on test labels. Daily q50 dispersion is a point proxy and excludes conditional residual variance. Source publication/vintage history is unavailable: these are exploratory historical results, NOT a verified executable ex-ante strategy. No fundamental or weather features are used. No claim of statistically significant superiority; uncertainty intervals remain future work.</p><h2>Walk-forward comparison</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>model</th>
+      <th>observations</th>
+      <th>coverage_80</th>
+      <th>mean_width</th>
+      <th>pinball_q10</th>
+      <th>pinball_q50</th>
+      <th>pinball_q90</th>
+      <th>brier_p_negative</th>
+      <th>average_precision_p_negative</th>
+      <th>brier_p_spike</th>
+      <th>average_precision_p_spike</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>gradient_boosting</td>
+      <td>25272</td>
+      <td>0.694642</td>
+      <td>71.574080</td>
+      <td>7.410584</td>
+      <td>14.639304</td>
+      <td>7.437498</td>
+      <td>0.041344</td>
+      <td>0.465287</td>
+      <td>0.036406</td>
+      <td>0.421610</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>linear_quantile</td>
+      <td>25272</td>
+      <td>0.750950</td>
+      <td>116.921222</td>
+      <td>10.166441</td>
+      <td>16.164967</td>
+      <td>9.680514</td>
+      <td>0.050869</td>
+      <td>0.198584</td>
+      <td>0.044132</td>
+      <td>0.241372</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>seasonal_history</td>
+      <td>25272</td>
+      <td>0.770734</td>
+      <td>107.278469</td>
+      <td>10.089404</td>
+      <td>18.299835</td>
+      <td>10.232187</td>
+      <td>0.050869</td>
+      <td>0.198584</td>
+      <td>0.044132</td>
+      <td>0.241372</td>
+    </tr>
+  </tbody>
+</table><h2>Probability reliability</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>model</th>
+      <th>event</th>
+      <th>bin</th>
+      <th>count</th>
+      <th>mean_probability</th>
+      <th>event_frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(-0.001, 0.1]</td>
+      <td>22529</td>
+      <td>0.011566</td>
+      <td>0.023703</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.1, 0.2]</td>
+      <td>1053</td>
+      <td>0.141494</td>
+      <td>0.207977</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.2, 0.3]</td>
+      <td>500</td>
+      <td>0.249126</td>
+      <td>0.268000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.3, 0.4]</td>
+      <td>369</td>
+      <td>0.349168</td>
+      <td>0.298103</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.4, 0.5]</td>
+      <td>269</td>
+      <td>0.448875</td>
+      <td>0.557621</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.5, 0.6]</td>
+      <td>164</td>
+      <td>0.550283</td>
+      <td>0.506098</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.6, 0.7]</td>
+      <td>130</td>
+      <td>0.645771</td>
+      <td>0.661538</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.7, 0.8]</td>
+      <td>109</td>
+      <td>0.749856</td>
+      <td>0.752294</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.8, 0.9]</td>
+      <td>125</td>
+      <td>0.850047</td>
+      <td>0.752000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>gradient_boosting</td>
+      <td>p_negative</td>
+      <td>(0.9, 1.0]</td>
+      <td>24</td>
+      <td>0.937793</td>
+      <td>0.625000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(-0.001, 0.1]</td>
+      <td>23979</td>
+      <td>0.004351</td>
+      <td>0.025272</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.1, 0.2]</td>
+      <td>428</td>
+      <td>0.143646</td>
+      <td>0.359813</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.2, 0.3]</td>
+      <td>232</td>
+      <td>0.247676</td>
+      <td>0.375000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.3, 0.4]</td>
+      <td>150</td>
+      <td>0.345892</td>
+      <td>0.460000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.4, 0.5]</td>
+      <td>136</td>
+      <td>0.447040</td>
+      <td>0.573529</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.5, 0.6]</td>
+      <td>117</td>
+      <td>0.551465</td>
+      <td>0.564103</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.6, 0.7]</td>
+      <td>99</td>
+      <td>0.648400</td>
+      <td>0.585859</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.7, 0.8]</td>
+      <td>74</td>
+      <td>0.743864</td>
+      <td>0.554054</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.8, 0.9]</td>
+      <td>37</td>
+      <td>0.851112</td>
+      <td>0.378378</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>gradient_boosting</td>
+      <td>p_spike</td>
+      <td>(0.9, 1.0]</td>
+      <td>20</td>
+      <td>0.960562</td>
+      <td>0.700000</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>linear_quantile</td>
+      <td>p_negative</td>
+      <td>(-0.001, 0.1]</td>
+      <td>20898</td>
+      <td>0.023655</td>
+      <td>0.028137</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>linear_quantile</td>
+      <td>p_negative</td>
+      <td>(0.1, 0.2]</td>
+      <td>4032</td>
+      <td>0.146391</td>
+      <td>0.212054</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>linear_quantile</td>
+      <td>p_negative</td>
+      <td>(0.2, 0.3]</td>
+      <td>342</td>
+      <td>0.206738</td>
+      <td>0.187135</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>linear_quantile</td>
+      <td>p_spike</td>
+      <td>(-0.001, 0.1]</td>
+      <td>25236</td>
+      <td>0.014225</td>
+      <td>0.045728</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>linear_quantile</td>
+      <td>p_spike</td>
+      <td>(0.1, 0.2]</td>
+      <td>36</td>
+      <td>0.106115</td>
+      <td>0.916667</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>seasonal_history</td>
+      <td>p_negative</td>
+      <td>(-0.001, 0.1]</td>
+      <td>20898</td>
+      <td>0.023655</td>
+      <td>0.028137</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>seasonal_history</td>
+      <td>p_negative</td>
+      <td>(0.1, 0.2]</td>
+      <td>4032</td>
+      <td>0.146391</td>
+      <td>0.212054</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>seasonal_history</td>
+      <td>p_negative</td>
+      <td>(0.2, 0.3]</td>
+      <td>342</td>
+      <td>0.206738</td>
+      <td>0.187135</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>seasonal_history</td>
+      <td>p_spike</td>
+      <td>(-0.001, 0.1]</td>
+      <td>25236</td>
+      <td>0.014225</td>
+      <td>0.045728</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>seasonal_history</td>
+      <td>p_spike</td>
+      <td>(0.1, 0.2]</td>
+      <td>36</td>
+      <td>0.106115</td>
+      <td>0.916667</td>
+    </tr>
+  </tbody>
+</table></html>

@@ -1,0 +1,57 @@
+<!doctype html><html><meta charset='utf-8'><title>Hypothetical procurement risk</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;color:#152c40}table{border-collapse:collapse}td,th{padding:7px;border:1px solid #ddd}</style><h1>Hypothetical procurement risk</h1><p>1 MW flat purchase, 24-hour UTC horizon, 100 EUR/MWh reference. P&L=(reference−spot)×MW×hours. Historical complete-day blocks preserve within-day dependence; equal scenario weights assume historical representativeness. Loss=−P&L; VaR is the loss quantile; ES averages the worst 5% with fractional tail mass. Stress prices are deliberately hypothetical, not market observations. No hedge recommendation is implied.</p><h2>Historical scenario risk</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>scenarios</th>
+      <th>confidence</th>
+      <th>mean_pnl_eur</th>
+      <th>var_loss_eur</th>
+      <th>expected_shortfall_loss_eur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1417</td>
+      <td>0.95</td>
+      <td>115.0279</td>
+      <td>1559.9505</td>
+      <td>2698.887376</td>
+    </tr>
+  </tbody>
+</table><h2>Hypothetical fixed-price stress</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price_eur_mwh</th>
+      <th>pnl_eur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-100.0</td>
+      <td>4800.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>2400.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100.0</td>
+      <td>-0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>300.0</td>
+      <td>-4800.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000.0</td>
+      <td>-21600.0</td>
+    </tr>
+  </tbody>
+</table></html>
