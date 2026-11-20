@@ -1,0 +1,10 @@
+market: DE-LU
+timezone: Europe/Berlin
+start: '2023-01-01'
+end_exclusive: '2026-11-19'
+cutoff_local: '11:00'
+cutoff_days_before_delivery: 1
+positive_spike_eur_mwh: 200
+sharp_ramp_eur_mwh_per_hour: 100
+data_budget_eur: 0
+# Descriptive reference settings; CLI flags control the audited date range.
